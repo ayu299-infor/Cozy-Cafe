@@ -1,0 +1,256 @@
+        :root {
+            --soft-pink: #fff5f6;
+            --deep-pink: #a37b82;
+            --gold: #d4af37;
+            --glass: rgba(255, 255, 255, 0.8);
+        }
+
+        * { box-sizing: border-box; }
+        body { 
+            margin: 0; 
+            font-family: 'Montserrat', sans-serif;
+            background: var(--soft-pink); 
+            color: #5d4037; 
+       
+        }
+
+      /* Navigation */
+nav {
+    position: fixed; 
+    top: 0; /* Memperbaiki typo 't op' */
+    left: 0; /* Tambahkan ini agar navigasi rata kiri */
+    width: 100%; 
+    background: var(--glass);
+    backdrop-filter: blur(10px); 
+    padding: 25px; 
+    text-align: center;
+    border-bottom: 1px solid #f8d7da; 
+    z-index: 1000;
+}
+nav a {
+    text-decoration: none; 
+    color: var(--deep-pink); 
+    margin: 0 10px;
+    font-size: 0.9rem; /* Diubah dari 0.7rem agar lebih mudah diklik */
+    letter-spacing: 1px; 
+    text-transform: uppercase; 
+    font-weight: 600;
+    display: inline-block; /* Tambahkan ini untuk memperluas area klik */
+}
+
+
+        /* Layout */
+        section { 
+        min-height: 100vh; 
+        padding: 100px 20px 60px; 
+        display: none; 
+        }
+        
+        section.active { 
+        display: block; 
+   
+        }
+        @keyframes fadeIn { 
+        from {
+        opacity: 0; 
+        transform: translateY(10px); 
+        } 
+        to { 
+        opacity: 1; 
+        transform: translateY(0); 
+        } 
+        }
+
+        h1, h2 { 
+        font-family: 'Playfair Display', serif; 
+        color: var(--deep-pink); 
+        text-align: center; 
+        }
+        
+        .container { 
+        max-width: 1100px; 
+        margin: auto; 
+        }
+
+        /* Halaman 1: Biodata */
+        .grid-bio { 
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, 
+        minmax(280px, 1fr));
+        gap: 20px;
+        }
+        
+        .card-bio {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        text-align: center; 
+        border: 1px solid #eee; 
+        }
+        
+        .card-bio img { 
+        width: 90px; 
+        height: 90px; 
+        border-radius: 50%; 
+        border: 2px solid var(--gold); 
+        padding: 5px; 
+        margin-bottom: 10px; 
+        object-fit: cover;
+        }
+
+        /* Halaman 2: Cafe & Fasilitas (Merged) */
+        .hero-image-container {
+        max-width: 900px;
+        margin: 0 auto 30px;
+        border: 10px solid var(--gold); 
+        border-radius: 10px;
+          }
+
+        .hero-image-container img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;      
+        display: block;
+        }
+          
+        .welcome-box { 
+        background: white;
+        padding: 40px; 
+        border: 2px solid var(--gold); 
+        max-width: 900px; 
+        margin: 0 auto 50px; 
+        text-align: center; 
+        }
+        
+        .grid-fac { 
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, 
+        minmax(200px, 1fr)); 
+        gap: 15px; 
+        }
+        
+        .card-fac { 
+        background: white;
+        border-radius: 10px; 
+        overflow: hidden; 
+        border-bottom: 3px solid var(--gold);
+        text-align: center; 
+        padding-bottom: 10px; 
+        font-size: 0.85rem; 
+        }
+        
+        .card-fac img { 
+        width: 100%; 
+        height: 140px; 
+        object-fit: cover; 
+        }
+
+        /* Halaman 3: Menu with Photos */
+        .menu-list { 
+        max-width: 800px; 
+        margin: auto; 
+        background: white; 
+        padding: 30px; 
+        border-radius: 20px; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+        }
+        
+        .menu-grid { 
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        gap: 25px; 
+        margin-top: 30px; 
+        }
+        
+        .menu-card { 
+        display: flex; 
+        flex-direction: column; 
+        gap: 10px; 
+        }
+        
+        .menu-card img { 
+        width: 100%; 
+        height: 400px; 
+        border-radius: 12px; 
+        object-fit: cover; 
+        border: 1px solid var(--soft-pink); 
+        }
+       
+        .menu-info { 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: baseline; 
+        border-bottom: 1px dashed var(--gold); 
+        }
+        
+        .menu-desc { 
+        font-size: 0.75rem; 
+        font-style: italic; 
+        color: #777; 
+        line-height: 1.4; 
+        }
+
+        /* Halaman 4: Menu with Photos */
+        .menu-list { 
+        max-width: 800px; 
+        margin: auto;
+        background: white; 
+        padding: 30px; 
+        border-radius: 20px; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .menu-grid { 
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        gap: 25px; margin-top: 30px; 
+        }
+        
+        .menu-card { 
+        display: flex; 
+        flex-direction: column; 
+        gap: 10px; 
+        }
+        
+        .menu-card img { 
+        width: 100%; 
+        height: 260px; 
+        border-radius: 12px;
+        object-fit: cover; 
+        border: 1px solid var(--soft-pink); 
+        }
+        
+        .menu-info { 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: baseline; 
+        border-bottom: 1px dashed var(--gold); 
+        }
+        
+        .menu-desc { 
+        font-size: 0.75rem; 
+        font-style: italic; 
+        color: #777; 
+        line-height: 1.4; }
+
+        /* Halaman 5: Penutup */
+        .bye {
+        height: 70vh; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+        }
+        
+        .close-card { 
+        background: white; 
+        border: 1px solid var(--gold); 
+        padding: 80px; 
+        border-radius: 20px; 
+        text-align: center; 
+        max-width: 800px; 
+        }
+
+        @media (max-width: 600px) {
+            .menu-grid { 
+            grid-template-columns: 1fr; }
+        }
